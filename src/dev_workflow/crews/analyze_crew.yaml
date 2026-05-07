@@ -1,0 +1,21 @@
+# CrewAI crew configuration for the Analyze stage
+# Pipeline position: 2 of 7
+# Responsibilities: Extract summary, acceptance criteria, edge cases, technical considerations
+# Outputs: AnalysisOutput Pydantic model with confidence score
+
+version: "1.0"
+name: "analyze_crew"
+description: "Analyzes Jira ticket data to extract requirements and edge cases"
+
+agents:
+  - role: "Requirements Analyst"
+    goal: "Extract structured requirements from ticket data"
+    backstory: |
+      Expert at requirements analysis. Identifies acceptance criteria,
+      edge cases, and technical considerations from natural language descriptions.
+    verbose: true
+
+tasks:
+  - id: "analyze_ticket"
+    description: "Analyze ticket data and extract structured requirements"
+    expected_output: "AnalysisOutput Pydantic model with confidence score >= 0.7"

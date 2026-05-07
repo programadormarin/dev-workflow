@@ -1,0 +1,20 @@
+# CrewAI crew configuration for the Fetch stage
+# Pipeline position: 1 of 7 (Fetch → Analyze → Enrich → Document → Implement → QA → PR)
+# Responsibilities: Fetch Jira ticket data including description, acceptance criteria, comments, linked issues
+
+version: "1.0"
+name: "fetch_crew"
+description: "Fetches Jira ticket data from Jira Cloud REST API"
+
+agents:
+  - role: "Jira Data Fetcher"
+    goal: "Retrieve complete ticket data from Jira Cloud"
+    backstory: |
+      Expert at navigating Jira Cloud REST API. Can fetch ticket details,
+      comments, and linked issues efficiently.
+    verbose: true
+
+tasks:
+  - id: "fetch_ticket_data"
+    description: "Fetch complete Jira ticket data for the given ticket key"
+    expected_output: "JiraTicket Pydantic model with all fields populated"

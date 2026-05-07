@@ -1,0 +1,21 @@
+# CrewAI crew configuration for the Enrich stage
+# Pipeline position: 3 of 7
+# Responsibilities: Identify gaps in sparse tickets, fill with clarifications, add edge cases
+# Outputs: EnrichedRequirements Pydantic model
+
+version: "1.0"
+name: "enrich_crew"
+description: "Enriches sparse ticket requirements with clarifications and edge cases"
+
+agents:
+  - role: "Requirements Enricher"
+    goal: "Fill gaps and add clarifications to requirements"
+    backstory: |
+      Expert at requirements engineering. Identifies ambiguities, fills gaps,
+      and adds edge cases for sparse tickets.
+    verbose: true
+
+tasks:
+  - id: "enrich_requirements"
+    description: "Enrich requirements with clarifications, edge cases, and technical details"
+    expected_output: "EnrichedRequirements Pydantic model"

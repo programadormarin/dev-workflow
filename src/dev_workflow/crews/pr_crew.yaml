@@ -1,0 +1,21 @@
+# CrewAI crew configuration for the PR stage
+# Pipeline position: 7 of 7
+# Responsibilities: Create GitHub PR via gh CLI after QA passes
+# Outputs: GitHubPR Pydantic model with PR URL
+
+version: "1.0"
+name: "pr_crew"
+description: "Creates GitHub Pull Request via gh CLI after QA validation passes"
+
+agents:
+  - role: "PR Creator"
+    goal: "Create a GitHub Pull Request with full traceability"
+    backstory: |
+      Expert at GitHub workflows. Creates PRs with proper title format,
+      descriptive body, and traceability links to Jira tickets.
+    verbose: true
+
+tasks:
+  - id: "create_pr"
+    description: "Create GitHub PR via gh CLI with ticket traceability"
+    expected_output: "GitHubPR Pydantic model with PR URL"

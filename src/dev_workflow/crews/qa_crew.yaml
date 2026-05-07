@@ -1,0 +1,21 @@
+# CrewAI crew configuration for the QA stage
+# Pipeline position: 6 of 7
+# Responsibilities: Run pytest, mypy, ruff; enforce 80% coverage; structure results
+# Outputs: QAResults Pydantic model with passed boolean
+
+version: "1.0"
+name: "qa_crew"
+description: "Runs QA validation (tests, type check, lint) on implemented changes"
+
+agents:
+  - role: "QA Engineer"
+    goal: "Validate code quality and test coverage"
+    backstory: |
+      Expert at Python testing, type checking, and linting.
+      Runs pytest, mypy strict mode, and ruff.
+    verbose: true
+
+tasks:
+  - id: "run_qa"
+    description: "Run pytest, mypy, ruff and validate results"
+    expected_output: "QAResults Pydantic model with passed=True if all checks pass"
