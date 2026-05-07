@@ -1,0 +1,14 @@
+[project]
+name = "dev-workflow"
+version = "0.1.0"
+description = "Production-ready Python project that uses CrewAI to orchestrate a multi-agent software delivery workflow for Jira-driven feature and bugfix execution."
+authors = [{name = "dev-workflow"}]
+dependencies = ["crewai>=0.2.0", "pydantic", "httpx"]
+requires-python = ">=3.11"
+
+[tool.ruff]
+select = ["E", "F", "W"]
+line-length = 88
+
+[tool.mypy]
+strict = true
