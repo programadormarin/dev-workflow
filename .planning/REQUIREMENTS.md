@@ -172,11 +172,11 @@ Explicitly excluded. Documented to prevent scope creep.
 | QA-04 | Phase 8 | Pending |
 | QA-05 | Phase 8 | Pending |
 | QA-06 | Phase 8 | Pending |
-| PR-01 | Phase 9 | Pending |
-| PR-02 | Phase 9 | Pending |
-| PR-03 | Phase 9 | Pending |
-| PR-04 | Phase 9 | Pending |
-| PR-05 | Phase 9 | Pending |
+| PR-01 | Phase 8 | Pending |
+| PR-02 | Phase 8 | Pending |
+| PR-03 | Phase 8 | Pending |
+| PR-04 | Phase 8 | Pending |
+| PR-05 | Phase 8 | Pending |
 | FLOW-01 | Phase 3 | Pending |
 | FLOW-02 | Phase 3 | Pending |
 | FLOW-03 | Phase 3 | Pending |
@@ -184,14 +184,14 @@ Explicitly excluded. Documented to prevent scope creep.
 | AUDI-01 | Phase 3 | Pending |
 | AUDI-02 | Phase 3 | Pending |
 | AUDI-03 | Phase 3 | Pending |
-| AUDI-04 | Phase 9 | Pending |
-| STRU-01 | Phase 2 | Pending |
-| STRU-02 | Phase 2 | Pending |
-| STRU-03 | Phase 2 | Pending |
-| STRU-04 | Phase 2 | Pending |
-| STRU-05 | Phase 2 | Pending |
+| AUDI-04 | Phase 8 | Pending |
+| STRU-01 | Phase 1 | Pending |
+| STRU-02 | Phase 1 | Pending |
+| STRU-03 | Phase 1 | Pending |
+| STRU-04 | Phase 1 | Pending |
+| STRU-05 | Phase 1 | Pending |
 | STRU-06 | Phase 3 | Pending |
-| STRU-07 | Phase 2 | Pending |
+| STRU-07 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 59 total
