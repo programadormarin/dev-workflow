@@ -36,7 +36,12 @@
 7. Main flow exists in `src/dev_workflow/application/delivery_flow.py`
 8. `uv.lock` file is present for reproducible builds
 
-**Plans:** TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Domain models + infrastructure adapters + tests
+- [ ] 01-02-PLAN.md — Ports protocols + delivery flow + crew YAML configs
+- [ ] 01-03-PLAN.md — Entry point + uv.lock + smoke tests
 
 ---
 
