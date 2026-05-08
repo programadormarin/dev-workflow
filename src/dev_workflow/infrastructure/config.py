@@ -1,8 +1,9 @@
 """Infrastructure layer: configuration loading."""
 import os
-from typing import List, Optional
+from typing import TYPE_CHECKING, List, Optional
 
-from src.dev_workflow.domain.models.credentials import JiraCredentials
+if TYPE_CHECKING:
+    from src.dev_workflow.domain.models.credentials import JiraCredentials
 
 
 class ConfigurationError(Exception):
@@ -33,7 +34,7 @@ class ConfigLoader:
         Args:
             lazy: If True, defer loading until first access. If False, load now.
         """
-        self._jira_credentials: Optional[JiraCredentials] = None
+        self._jira_credentials: Optional["JiraCredentials"] = None
         self._lazy = lazy
 
         if not lazy:
@@ -69,16 +70,22 @@ class ConfigLoader:
         )
 
     @property
-    def jira_credentials(self) -> JiraCredentials:
+    def jira_credentials(self) -> "JiraCredentials":
         """Access Jira credentials (lazy-load if configured)."""
         if self._jira_credentials is None:
             self._load_jira_credentials()
         return self._jira_credentials
 
-    def get_jira(self) -> JiraCredentials:
+    def get_jira(self) -> "JiraCredentials":
         """Get Jira credentials — alias for jira_credentials property."""
         return self.jira_credentials
 
     def validate(self) -> None:
-        """Explicit validation — raises ConfigurationError if missing."""
-        self._load_jira_credentials()
+        """
+        Explicit validation — raises ConfigurationError if missing.
+
+        If credentials are already loaded, this is a no-op.
+        Use this to force validation without reloading if already loaded.
+        """
+        if self._jira_credentials is None:
+            self._load_jira_credentials()
