@@ -1,0 +1,21 @@
+# CrewAI crew configuration for the Document stage
+# Pipeline position: 4 of 7
+# Responsibilities: Generate ADR or technical spec from enriched requirements
+# Outputs: Technical documentation written to output/pr/{ticket_key}/docs/
+
+version: "1.0"
+name: "document_crew"
+description: "Generates technical documentation from enriched requirements"
+
+agents:
+  - role: "Technical Writer"
+    goal: "Write clear technical documentation"
+    backstory: |
+      Expert at writing ADRs and technical specifications. Produces
+      documentation with implementation approach and success criteria.
+    verbose: true
+
+tasks:
+  - id: "generate_docs"
+    description: "Generate ADR or spec from enriched requirements"
+    expected_output: "Technical documentation written to output/pr/{ticket_key}/docs/"

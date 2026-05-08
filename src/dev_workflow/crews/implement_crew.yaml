@@ -1,0 +1,21 @@
+# CrewAI crew configuration for the Implement stage
+# Pipeline position: 5 of 7
+# Responsibilities: Break work into concrete tasks with file-level assignments
+# Outputs: ImplementationPlan Pydantic model with task list and affected files
+
+version: "1.0"
+name: "implement_crew"
+description: "Breaks work into tasks with file-level assignments"
+
+agents:
+  - role: "Implementation Planner"
+    goal: "Create detailed implementation task breakdown"
+    backstory: |
+      Expert at software architecture. Breaks requirements into
+      actionable tasks with clear file assignments.
+    verbose: true
+
+tasks:
+  - id: "plan_implementation"
+    description: "Break enriched requirements into concrete tasks"
+    expected_output: "ImplementationPlan Pydantic model with task list and affected files"

@@ -36,7 +36,12 @@
 7. Main flow exists in `src/dev_workflow/application/delivery_flow.py`
 8. `uv.lock` file is present for reproducible builds
 
-**Plans:** TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Domain models + infrastructure adapters + tests
+- [ ] 01-02-PLAN.md — Ports protocols + delivery flow + crew YAML configs
+- [ ] 01-03-PLAN.md — Entry point + uv.lock + smoke tests
 
 ---
 
@@ -212,7 +217,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Structure | 0/1 | Not started | - |
+| 1. Project Structure | 0/3 | Ready to execute | - |
 | 2. Authentication | 0/1 | Not started | - |
 | 3. Jira Integration & Flow | 0/1 | Not started | - |
 | 4. Requirements Processing | 0/1 | Not started | - |

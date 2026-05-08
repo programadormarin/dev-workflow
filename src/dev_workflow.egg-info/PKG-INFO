@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: dev-workflow
+Version: 0.1.0
+Summary: Production-ready Python project that uses CrewAI to orchestrate a multi-agent software delivery workflow for Jira-driven feature and bugfix execution.
+Author: dev-workflow
+Requires-Python: >=3.11
+Requires-Dist: crewai>=0.2.0
+Requires-Dist: pydantic
+Requires-Dist: httpx
