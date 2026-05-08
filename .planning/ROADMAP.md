@@ -60,7 +60,10 @@ Plans:
 3. System validates all required environment variables on startup with clear error messages (not generic errors)
 4. No hardcoded credentials exist anywhere in the codebase (verifiable via grep for secrets)
 
-**Plans:** TBD
+**Plans:** 1 plan
+
+Plans:
+- [x] 02-01-PLAN.md — Auth module: credential models + env loader + GH CLI verification
 
 ---
 
