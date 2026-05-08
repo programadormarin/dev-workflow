@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-last_updated: "2026-05-08T18:05:44.359Z"
+last_updated: "2026-05-08T18:06:23.766Z"
 progress:
   total_phases: 8
   completed_phases: 1
-  total_plans: 3
+  total_plans: 4
   completed_plans: 3
-  percent: 100
+  percent: 75
 ---
 
 # State: CrewAI Jira-Driven Software Delivery Orchestrator
