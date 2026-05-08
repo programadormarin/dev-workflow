@@ -63,7 +63,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Auth module: credential models + env loader + GH CLI verification
+- [x] 02-01-PLAN.md — Auth module: credential models + env loader + GH CLI verification
 
 ---
 
