@@ -113,9 +113,12 @@ class GitHubAuth:
                 )
 
     def is_verified(self) -> bool:
-        """Quick check if gh CLI is authenticated."""
-        try:
-            creds = self.verify()
-            return creds.verified
-        except GitHubAuthError:
-            return False
+        """
+        Quick check if gh CLI is authenticated.
+
+        Returns:
+            True if authenticated, False if not authenticated.
+            Raises GitHubAuthError for installation issues (timeout, not installed).
+        """
+        creds = self.verify()
+        return creds.verified
