@@ -4,7 +4,8 @@ This protocol defines what the domain needs from a Jira service.
 Infrastructure adapters (e.g., JiraAdapter) implement this protocol,
 allowing the domain to remain independent of Jira API details.
 
-Per clean architecture: domain defines interfaces (ports), infrastructure implements them.
+Per clean architecture: domain defines interfaces (ports),
+infrastructure implements them.
 """
 from abc import ABC, abstractmethod
 from src.dev_workflow.domain.models.jira_ticket import JiraTicket

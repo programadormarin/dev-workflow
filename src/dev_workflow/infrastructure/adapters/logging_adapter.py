@@ -5,6 +5,7 @@ To be fully implemented alongside audit requirements (AUDI-01, AUDI-02, AUDI-03)
 """
 import logging
 from pathlib import Path
+from typing import Optional
 
 
 class LoggingAdapter:
@@ -17,7 +18,7 @@ class LoggingAdapter:
         log_dir: Directory for log files (default: logs/)
     """
 
-    def __init__(self, log_dir: str | None = None) -> None:
+    def __init__(self, log_dir: Optional[str] = None) -> None:
         self.log_dir = Path(log_dir) if log_dir else Path("logs")
         self.log_dir.mkdir(parents=True, exist_ok=True)
 

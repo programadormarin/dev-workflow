@@ -39,8 +39,12 @@ class JiraAdapter:
 
     def fetch_ticket_comments(self, ticket_key: str) -> list[str]:
         """Fetch comments for a Jira ticket."""
-        raise NotImplementedError("JiraAdapter.fetch_ticket_comments() implemented in Phase 3")
+        raise NotImplementedError(
+            "JiraAdapter.fetch_ticket_comments() implemented in Phase 3"
+        )
 
     def fetch_linked_issues(self, ticket_key: str) -> list[str]:
         """Fetch linked issues for a Jira ticket."""
-        raise NotImplementedError("JiraAdapter.fetch_linked_issues() implemented in Phase 3")
+        raise NotImplementedError(
+            "JiraAdapter.fetch_linked_issues() implemented in Phase 3"
+        )

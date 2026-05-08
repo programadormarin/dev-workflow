@@ -1,5 +1,4 @@
 """Smoke tests for DeliveryFlow orchestrator."""
-import pytest
 from unittest.mock import MagicMock
 from src.dev_workflow.application.delivery_flow import (
     DeliveryFlow,
@@ -63,5 +62,4 @@ class TestDeliveryFlow:
 
     def test_delivery_flow_error_exists(self):
         """DeliveryFlowError exception should be importable."""
-        from src.dev_workflow.application.delivery_flow import DeliveryFlowError
         assert issubclass(DeliveryFlowError, Exception)

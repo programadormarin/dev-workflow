@@ -46,4 +46,6 @@ class GitHubAdapter:
 
     def get_pr_status(self, pr_number: int) -> str:
         """Get the status of a Pull Request by number."""
-        raise NotImplementedError("GitHubAdapter.get_pr_status() implemented in Phase 8")
+        raise NotImplementedError(
+            "GitHubAdapter.get_pr_status() implemented in Phase 8"
+        )

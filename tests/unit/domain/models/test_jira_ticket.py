@@ -1,5 +1,4 @@
 """Unit tests for JiraTicket domain model."""
-import pytest
 from src.dev_workflow.domain.models.jira_ticket import JiraTicket, IssueType
 
 
