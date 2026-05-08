@@ -5,8 +5,8 @@ from src.dev_workflow.domain.models.github_pr import GitHubPR
 class TestGitHubPR:
     """Test suite for GitHubPR Pydantic model."""
 
-    def test_create_pr_with_required_fields(self):
-        """Should create a GitHubPR with required fields."""
+    def test_create_pr_with_required_fields_and_defaults(self):
+        """Should create a GitHubPR with required fields and defaults."""
         pr = GitHubPR(
             number=42,
             title="Implement feature",
@@ -30,6 +30,7 @@ class TestGitHubPR:
             url="https://github.com/org/repo/pull/101",
             ticket_key="PROJ-101",
         )
-        json_str = pr.model_dump_json()
-        assert "101" in json_str
-        assert "PROJ-101" in json_str
+        payload = pr.model_dump(mode="json")
+        assert payload["number"] == 101
+        assert payload["ticket_key"] == "PROJ-101"
+        assert payload["base_branch"] == "main"
