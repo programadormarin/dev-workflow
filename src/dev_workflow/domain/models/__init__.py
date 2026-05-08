@@ -15,4 +15,4 @@ __all__ = [
     "GitHubCredentials",
     "ConfigLoader",
     "ConfigurationError",
-]
+]a
